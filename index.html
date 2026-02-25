@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Health Management System | SIH 2025</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Unified Design System -->
+    <link rel="stylesheet" href="shared-design-system.css">
+    <link rel="stylesheet" href="landing-style.css">
+<body class="antialiased">
+    <!-- Hero Background Image -->
+    <div class="hero-bg"></div>
+    
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-gray-900/95 backdrop-blur-md border-b border-gray-700 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-24">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <a href="#" class="flex items-center group">
+                            <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mr-3 transform group-hover:rotate-6 transition-transform duration-300 shadow-lg">
+                                <i class="fas fa-paw text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <div class="flex items-baseline">
+                                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent text-2xl font-bold tracking-tight">AHMS</span>
+                                    <span class="ml-2 px-2 py-0.5 rounded-full bg-blue-900/30 text-blue-300 text-xs font-medium">Karnataka</span>
+                                </div>
+                                <p class="text-xs text-gray-400 font-medium mt-0.5">Animal Health Management System</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#home" class="px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center group">
+                        <i class="fas fa-home mr-2 text-blue-400 group-hover:scale-110 transition-transform"></i>
+                        <span>Home</span>
+                    </a>
+                    <a href="WEB APP FOR DIRECTOR/index.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center group">
+                        <i class="fas fa-user-tie mr-2 text-purple-400 group-hover:scale-110 transition-transform"></i>
+                        <span>Directors</span>
+                    </a>
+                    <a href="WEB APP OF DISTRICT DIRECTOR/index.html" class="px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center group">
+                        <i class="fas fa-map-marked-alt mr-2 text-green-400 group-hover:scale-110 transition-transform"></i>
+                        <span>Districts</span>
+                    </a>
+                    <a href="#mobile-apps" class="px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center group">
+                        <i class="fas fa-mobile-alt mr-2 text-yellow-400 group-hover:scale-110 transition-transform"></i>
+                        <span>Mobile Apps</span>
+                    </a>
+                    <a href="#about" class="px-4 py-2.5 rounded-lg text-sm font-medium text-gray-300 hover:bg-gray-800 hover:text-white transition-all duration-300 flex items-center group">
+                        <i class="fas fa-info-circle mr-2 text-blue-300 group-hover:scale-110 transition-transform"></i>
+                        <span>About</span>
+                    </a>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex items-center space-x-4">
+                    <div class="live-status hidden sm:flex items-center space-x-2">
+                        <div class="pulse-dot"></div>
+                        <span class="text-sm text-green-400 font-medium">LIVE</span>
+                    </div>
+                    <button class="emergency-btn bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-full transition-colors flex items-center space-x-2">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <span class="hidden sm:inline">Emergency</span>
+                    </button>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="md:hidden mobile-menu-btn text-white hover:text-blue-400">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#home" class="nav-link text-white hover:text-blue-400 py-2">Home</a>
+                    <a href="WEB APP FOR DIRECTOR/index.html" class="nav-link text-white hover:text-blue-400 py-2">Directors</a>
+                    <a href="WEB APP OF DISTRICT DIRECTOR/index.html" class="nav-link text-white hover:text-blue-400 py-2">Districts</a>
+                    <a href="#mobile-apps" class="nav-link text-white hover:text-blue-400 py-2">Mobile Apps</a>
+                    <a href="#about" class="nav-link text-white hover:text-blue-400 py-2">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Landing Page Content -->
+    <div id="home" class="relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+            <div class="text-center">
+                <!-- Badge -->
+                <div class="hero-badge inline-flex items-center px-6 py-2 rounded-full text-sm font-medium bg-indigo-500/10 text-indigo-400 ring-1 ring-inset ring-indigo-500/20">
+                    <svg class="h-4 w-4 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    </svg>
+                    SIH 2025 - Problem Statement 25006
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="mt-8 text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+                    <span class="block">Revolutionary</span>
+                    <span class="block text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500">Animal Health</span>
+                    <span class="block">Management System</span>
+                </h1>
+                
+                <!-- Subtitle -->
+                <p class="mt-8 text-xl text-gray-300 max-w-3xl mx-auto">
+                    Advanced AI-powered surveillance system for comprehensive livestock disease monitoring, 
+                    prevention, and rapid response across <span class="font-semibold text-yellow-400">Karnataka</span>
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="mt-12 flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#dashboard" class="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-medium rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Explore Dashboard
+                    </a>
+                    <a href="#features" class="px-8 py-4 bg-white/10 text-white font-medium rounded-lg hover:bg-white/20 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-lg flex items-center justify-center backdrop-blur-sm">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        Learn More
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="mt-16 grid grid-cols-2 gap-8 sm:grid-cols-4">
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white">100+</div>
+                        <div class="mt-2 text-sm font-medium text-gray-400">Districts Covered</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white">10K+</div>
+                        <div class="mt-2 text-sm font-medium text-gray-400">Farms Monitored</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white">24/7</div>
+                        <div class="mt-2 text-sm font-medium text-gray-400">Real-time Tracking</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-4xl font-bold text-white">99.9%</div>
+                        <div class="mt-2 text-sm font-medium text-gray-400">Accuracy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hero Features -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="feature-item">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-brain text-3xl text-blue-400"></i>
+                        </div>
+                        <h3 class="feature-title text-lg font-semibold text-white mb-2">AI-Powered</h3>
+                        <p class="feature-desc text-gray-400 text-sm">Smart disease prediction and outbreak prevention</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-mobile-alt text-3xl text-green-400"></i>
+                        </div>
+                        <h3 class="feature-title text-lg font-semibold text-white mb-2">Mobile-First</h3>
+                        <p class="feature-desc text-gray-400 text-sm">Field-ready apps for farmers and veterinarians</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon mb-3">
+                            <i class="fas fa-shield-alt text-3xl text-purple-400"></i>
+                        </div>
+                        <h3 class="feature-title text-lg font-semibold text-white mb-2">Real-time</h3>
+                        <p class="feature-desc text-gray-400 text-sm">24/7 monitoring and instant alert system</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- Enhanced Navigation Section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <h3 class="text-2xl font-bold text-center text-white mb-8">Quick Access</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <a href="WEB APP FOR DIRECTOR/index.html" class="nav-card group bg-gradient-to-br from-blue-600/20 to-blue-800/20 hover:from-blue-600/30 hover:to-blue-800/30 border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300 rounded-xl p-6 text-center">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-500/30 transition-colors">
+                        <i class="fas fa-user-shield text-2xl text-blue-400"></i>
+                    </div>
+                    <h4 class="text-white font-medium text-lg mb-1">State Director</h4>
+                    <p class="text-sm text-gray-400">Executive Dashboard</p>
+                </a>
+                <a href="WEB APP OF DISTRICT DIRECTOR/index.html" class="nav-card group bg-gradient-to-br from-purple-600/20 to-purple-800/20 hover:from-purple-600/30 hover:to-purple-800/30 border border-purple-500/20 hover:border-purple-400/40 transition-all duration-300 rounded-xl p-6 text-center">
+                    <div class="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-purple-500/30 transition-colors">
+                        <i class="fas fa-users-cog text-2xl text-purple-400"></i>
+                    </div>
+                    <h4 class="text-white font-medium text-lg mb-1">District Director</h4>
+                    <p class="text-sm text-gray-400">Regional Overview</p>
+                </a>
+                <a href="MOBIILE APP OF VET/index.html" class="nav-card group bg-gradient-to-br from-green-600/20 to-green-800/20 hover:from-green-600/30 hover:to-green-800/30 border border-green-500/20 hover:border-green-400/40 transition-all duration-300 rounded-xl p-6 text-center">
+                    <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-500/30 transition-colors">
+                        <i class="fas fa-stethoscope text-2xl text-green-400"></i>
+                    </div>
+                    <h4 class="text-white font-medium text-lg mb-1">Veterinarian</h4>
+                    <p class="text-sm text-gray-400">Mobile Application</p>
+                </a>
+                <a href="MOBILE APP FOR FARMER/index.html" class="nav-card group bg-gradient-to-br from-amber-600/20 to-amber-800/20 hover:from-amber-600/30 hover:to-amber-800/30 border border-amber-500/20 hover:border-amber-400/40 transition-all duration-300 rounded-xl p-6 text-center">
+                    <div class="w-14 h-14 bg-amber-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-amber-500/30 transition-colors">
+                        <i class="fas fa-tractor text-2xl text-amber-400"></i>
+                    </div>
+                    <h4 class="text-white font-medium text-lg mb-1">Farmer</h4>
+                    <p class="text-sm text-gray-400">Mobile Application</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Directors Dashboard Section -->
+    <section id="directors" class="parallax-section pt-24 pb-32 overflow-hidden min-h-screen">
+        <div class="parallax-bg directors-bg"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex items-center justify-between mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white">State Directors Dashboard</h2>
+                <div class="flex items-center space-x-4">
+                    <span class="text-green-400 flex items-center">
+                        <i class="fas fa-circle mr-2 text-xs animate-pulse"></i>
+                        Real-time
+                    </span>
+                    <button class="px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors duration-300">Quick Report</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 fade-in">
+                <div class="animated-card p-6 bg-gray-800 bg-opacity-80 rounded-2xl border border-gray-700">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-2">Total Farms</h3>
+                    <p class="text-4xl font-extrabold text-white">12,490</p>
+                    <p class="text-sm text-green-400 mt-2 flex items-center">
+                        <i class="fas fa-trending-up mr-1"></i>
+                        +15.3% this month
+                    </p>
+                </div>
+                <div class="animated-card p-6 bg-gray-800 bg-opacity-80 rounded-2xl border border-gray-700">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-2">Active Alerts</h3>
+                    <p class="text-4xl font-extrabold text-red-400">39</p>
+                    <p class="text-sm text-red-400 mt-2 flex items-center">
+                        <i class="fas fa-trending-down mr-1"></i>
+                        -8% from yesterday
+                    </p>
+                </div>
+                <div class="animated-card p-6 bg-gray-800 bg-opacity-80 rounded-2xl border border-gray-700">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-2">Vaccination Coverage</h3>
+                    <p class="text-4xl font-extrabold text-blue-400">86.8%</p>
+                    <p class="text-sm text-blue-400 mt-2 flex items-center">
+                        <i class="fas fa-chart-pie mr-1"></i>
+                        Targeting 95%
+                    </p>
+                </div>
+                <div class="animated-card p-6 bg-gray-800 bg-opacity-80 rounded-2xl border border-gray-700">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-2">Compliance Rate</h3>
+                    <p class="text-4xl font-extrabold text-white">84.1%</p>
+                    <p class="text-sm text-gray-400 mt-2 flex items-center">
+                        <i class="fas fa-equals mr-1"></i>
+                        Stable
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- District Directors Section -->
+    <section id="deputy-directors" class="parallax-section pt-24 pb-32 overflow-hidden min-h-screen">
+        <div class="parallax-bg deputy-bg"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex items-center justify-between mb-16 fade-in">
+                <h2 class="text-4xl lg:text-5xl font-bold text-white">District Directors Dashboard</h2>
+                <div class="flex items-center space-x-4">
+                    <span class="text-yellow-400 flex items-center">
+                        <i class="fas fa-play mr-1"></i>
+                        Actionable Insights
+                    </span>
+                    <button class="px-4 py-2 bg-yellow-500 text-gray-900 rounded-full hover:bg-yellow-600 transition-colors duration-300">Log Incident</button>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 fade-in">
+                <div class="animated-card bg-gray-800 bg-opacity-80 rounded-2xl border border-gray-700 p-6">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-4">Incidents Timeline</h3>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-center space-x-3">
+                            <span class="flex-shrink-0 h-3 w-3 bg-red-500 rounded-full"></span>
+                            <div>
+                                <p class="text-white">Avian Influenza H5N1 Investigation</p>
+                                <p>Bhor, Pune - Critical Priority</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="flex-shrink-0 h-3 w-3 bg-yellow-500 rounded-full"></span>
+                            <div>
+                                <p class="text-white">PPE Compliance Audit</p>
+                                <p>Mulshi, Pune - High Priority</p>
+                            </div>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="flex-shrink-0 h-3 w-3 bg-green-500 rounded-full"></span>
+                            <div>
+                                <p class="text-white">Vaccination Delay Investigation</p>
+                                <p>Haveli, Pune - Completed</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="animated-card bg-gray-800 bg-opacity-80 rounded-2xl border border-gray-700 p-6">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-4">High-Risk Visitors</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3 text-sm text-gray-400">
+                            <div class="w-2 h-2 bg-red-500 rounded-full"></div>
+                            <p class="text-white font-medium">Sunrise Poultry Farm</p>
+                            <p>- Feed Supply Vendor</p>
+                        </div>
+                        <div class="flex items-center space-x-3 text-sm text-gray-400">
+                            <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                            <p class="text-white font-medium">Modern Poultry Unit</p>
+                            <p>- Maintenance Crew</p>
+                        </div>
+                        <div class="flex items-center space-x-3 text-sm text-gray-400">
+                            <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                            <p class="text-white font-medium">Heritage Broilers</p>
+                            <p>- Quality Auditor</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="animated-card bg-gray-800 bg-opacity-80 rounded-2xl border border-gray-700 p-6">
+                    <h3 class="text-lg font-semibold text-gray-300 mb-4">Block Performance</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-center justify-between text-sm">
+                            <span class="text-white">Haveli</span>
+                            <span class="text-green-400">89% Vaccinated</span>
+                        </li>
+                        <li class="flex items-center justify-between text-sm">
+                            <span class="text-white">Bhor</span>
+                            <span class="text-red-400">68% Vaccinated</span>
+                        </li>
+                        <li class="flex items-center justify-between text-sm">
+                            <span class="text-white">Maval</span>
+                            <span class="text-green-400">94% Vaccinated</span>
+                        </li>
+                        <li class="flex items-center justify-between text-sm">
+                            <span class="text-white">Junnar</span>
+                            <span class="text-yellow-400">73% Vaccinated</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Apps Section -->
+    <section id="mobile-apps" class="relative py-24 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 opacity-20">
+            <div class="absolute inset-0 bg-[radial-gradient(#4f46e5_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        </div>
+        
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+            <!-- Section Header -->
+            <div class="text-center max-w-4xl mx-auto mb-20">
+                <span class="inline-block px-4 py-2 rounded-full text-sm font-medium bg-indigo-500/10 text-indigo-400 ring-1 ring-inset ring-indigo-500/20 mb-4">Mobile Experience</span>
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Powerful Mobile Solutions</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Accessible, intuitive, and feature-rich mobile applications designed specifically for veterinarians and farmers.</p>
+            </div>
+
+            <!-- Mobile Apps Grid -->
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Veterinarian App -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-600 to-purple-600 rounded-2xl opacity-75 group-hover:opacity-100 transition-all duration-300 blur-lg group-hover:blur-xl"></div>
+                    <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 group-hover:border-indigo-500/30 transition-all duration-300 h-full">
+                        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div class="w-full max-w-xs mx-auto lg:mx-0">
+                                <div class="mobile-device mx-auto">
+                                    <div class="mobile-device-frame">
+                                        <div class="mobile-device-screen">
+                                            <iframe src="MOBIILE APP OF VET/index.html" class="w-full h-full border-0 rounded-lg"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="mobile-device-home-button"></div>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-center lg:text-left">
+                                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 text-indigo-400 text-sm font-medium mb-4">
+                                    <i class="fas fa-stethoscope"></i>
+                                    <span>For Veterinarians</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Veterinarian Pro</h3>
+                                <p class="text-gray-400 mb-6">Advanced tools for disease diagnosis, case management, and field operations. Everything a modern veterinarian needs in one place.</p>
+                                <ul class="space-y-3 text-gray-300 text-left">
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>AI-powered disease detection</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Offline data collection</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Real-time alerts & notifications</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-8">
+                                    <a href="#" class="inline-flex items-center text-indigo-400 hover:text-white font-medium group">
+                                        Learn more about Vet Pro
+                                        <svg class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Farmer App -->
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl opacity-75 group-hover:opacity-100 transition-all duration-300 blur-lg group-hover:blur-xl"></div>
+                    <div class="relative bg-gray-800/50 backdrop-blur-md rounded-2xl p-8 border border-gray-700/50 group-hover:border-green-500/30 transition-all duration-300 h-full">
+                        <div class="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+                            <div class="w-full max-w-xs mx-auto lg:mx-0 order-2 lg:order-1">
+                                <div class="mobile-device mx-auto">
+                                    <div class="mobile-device-frame">
+                                        <div class="mobile-device-screen">
+                                            <iframe src="MOBILE APP FOR FARMER/index.html" class="w-full h-full border-0 rounded-lg"></iframe>
+                                        </div>
+                                    </div>
+                                    <div class="mobile-device-home-button"></div>
+                                </div>
+                            </div>
+                            <div class="flex-1 text-center lg:text-left order-1 lg:order-2">
+                                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 text-green-400 text-sm font-medium mb-4">
+                                    <i class="fas fa-tractor"></i>
+                                    <span>For Farmers</span>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-3">Farmer's Companion</h3>
+                                <p class="text-gray-400 mb-6">Your complete farming assistant with multi-language support, voice commands, and real-time monitoring.</p>
+                                <ul class="space-y-3 text-gray-300 text-left">
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Kannada/English interface</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Voice command support</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <svg class="h-5 w-5 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                                        </svg>
+                                        <span>Livestock health tracking</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-8">
+                                    <a href="#" class="inline-flex items-center text-green-400 hover:text-white font-medium group">
+                                        Discover Farmer's Companion
+                                        <svg class="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- App Store Badges -->
+            <div class="mt-16 flex flex-wrap justify-center gap-6">
+                <a href="#" class="inline-flex items-center gap-3 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-xl transition-all duration-300 group">
+                    <i class="fab fa-google-play text-2xl text-green-400"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-gray-400">GET IT ON</div>
+                        <div class="text-white font-medium">Google Play</div>
+                    </div>
+                </a>
+                <a href="#" class="inline-flex items-center gap-3 px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-xl transition-all duration-300 group">
+                    <i class="fab fa-apple text-2xl text-gray-300"></i>
+                    <div class="text-left">
+                        <div class="text-xs text-gray-400">Download on the</div>
+                        <div class="text-white font-medium">App Store</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-8 text-center text-gray-500 text-sm bg-gray-950 bg-opacity-90 relative z-10">
+        &copy; 2025 Animal Health Management System - Karnataka. SIH 2025 Winner.
+    </footer>
+
+    <script src="landing-script.js"></script>
+</body>
+</html>
