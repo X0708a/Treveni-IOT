@@ -319,3 +319,4 @@ Built with ❤️ for Smart India Hackathon 2024 by the **FarmGuard Development 
 *Smart India Hackathon 2024 Solution*
 
 **Ready to revolutionize farm management! 🚀**
+this is in progress.
